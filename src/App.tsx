@@ -10,6 +10,7 @@ import LevelSelect from "./pages/LevelSelect";
 import LevelPage from "./pages/LevelPage";
 import Completion from "./pages/Completion";
 import NotFound from "./pages/NotFound";
+import BackgroundMusic from "./components/BackgroundMusic";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        <BackgroundMusic />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
