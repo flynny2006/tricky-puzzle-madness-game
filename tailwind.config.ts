@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				game: {
+					'primary': '#9b87f5',
+					'secondary': '#FFD166',
+					'accent': '#F87060',
+					'success': '#06D6A0',
+					'warning': '#FFD166',
+					'error': '#EF476F',
+					'bg': '#F5F5F7',
+					'text': '#333333'
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-light': {
+					'0%, 100%': {
+						transform: 'translateY(-5%)',
+						animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+					},
+					'50%': {
+						transform: 'translateY(0)',
+						animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+					}
+				},
+				'pulse-light': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.8'
+					}
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
+				},
+				'pop': {
+					'0%': { transform: 'scale(0.95)', opacity: '0' },
+					'70%': { transform: 'scale(1.05)' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-light': 'bounce-light 1s infinite',
+				'pulse-light': 'pulse-light 1.5s infinite',
+				'wiggle': 'wiggle 0.5s ease-in-out',
+				'pop': 'pop 0.3s ease-out'
 			}
 		}
 	},
