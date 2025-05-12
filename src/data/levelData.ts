@@ -13,7 +13,7 @@ const levelData: LevelData[] = [
     id: 1,
     title: "Tap the Duck",
     description: "Tap the duck to proceed.",
-    hint: "Maybe the duck isn't what you think it is. Look at the entire screen carefully.",
+    hint: "The word 'duck' might be more important than the image. Read the text carefully and look for clickable elements.",
     solution: "Tap the word 'duck' in the description, not the duck image.",
     component: "DuckLevel"
   },
@@ -21,7 +21,7 @@ const levelData: LevelData[] = [
     id: 2,
     title: "Find the Button",
     description: "Find the hidden button to proceed.",
-    hint: "It could be invisible or very small. Check the corners!",
+    hint: "Check the corners of the screen carefully. The button is there but might be almost invisible or very tiny.",
     solution: "A tiny button is hidden in the bottom right corner.",
     component: "FindButtonLevel"
   },
@@ -29,7 +29,7 @@ const levelData: LevelData[] = [
     id: 3,
     title: "Solve 3 + 3",
     description: "What is 3 + 3?",
-    hint: "Don't overthink it. The answer might be different from what you expect.",
+    hint: "This is a trick question. In this puzzle world, math doesn't always follow the rules you expect. Try different answers.",
     solution: "The answer is 8, not 6. The level is about tricking expectations.",
     component: "MathLevel"
   },
@@ -37,7 +37,7 @@ const levelData: LevelData[] = [
     id: 4,
     title: "Turn on the Light",
     description: "Find a way to turn on the light.",
-    hint: "Sometimes you need to physically interact with your device.",
+    hint: "Try physically interacting with your device in different ways. Think about how you'd turn on a real light that won't respond to tapping.",
     solution: "Shake your phone/device to turn on the light.",
     component: "LightLevel"
   },
@@ -45,7 +45,7 @@ const levelData: LevelData[] = [
     id: 5,
     title: "Find the Exit",
     description: "Find the exit to proceed.",
-    hint: "Try looking at things from a different angle.",
+    hint: "Sometimes changing your perspective reveals new paths. Try rotating your device to see what happens.",
     solution: "Rotate your device to reveal the hidden exit.",
     component: "ExitLevel"
   },
@@ -53,7 +53,7 @@ const levelData: LevelData[] = [
     id: 6,
     title: "Open the Safe",
     description: "Open the safe by finding the correct code.",
-    hint: "The code is hidden somewhere on the screen.",
+    hint: "The colors in the title text hold the key to unlocking the safe. Notice the sequence of colored numbers and words.",
     solution: "The code is in the level title's styling/colors.",
     component: "SafeLevel"
   },
@@ -61,7 +61,7 @@ const levelData: LevelData[] = [
     id: 7,
     title: "Catch the Mouse",
     description: "Catch the mouse to proceed.",
-    hint: "You'll need to be quick or think of an alternative way.",
+    hint: "The mouse is too quick to catch directly. Think about how to trap it rather than catching it directly.",
     solution: "Click outside the mouse area to trap it.",
     component: "MouseLevel"
   },
@@ -69,7 +69,7 @@ const levelData: LevelData[] = [
     id: 8,
     title: "Count the Objects",
     description: "How many objects are there?",
-    hint: "Don't forget to count everything, including UI elements.",
+    hint: "Count EVERYTHING on the screen, including interface elements and objects that might not seem part of the puzzle at first.",
     solution: "The count includes the question mark and other UI elements.",
     component: "CountLevel"
   },
@@ -77,7 +77,7 @@ const levelData: LevelData[] = [
     id: 9,
     title: "Escape the Maze",
     description: "Find your way through the invisible maze.",
-    hint: "Use your finger to trace a path. The maze has invisible walls.",
+    hint: "Trace carefully with your finger. There might be a pattern to the walls - try following the edges of the screen first.",
     solution: "The correct path is along the top and right edges.",
     component: "MazeLevel"
   },
@@ -85,7 +85,7 @@ const levelData: LevelData[] = [
     id: 10,
     title: "Flip the Switch",
     description: "Find a way to flip the switch.",
-    hint: "You might need to use more than just tapping.",
+    hint: "Tapping might not be enough. Try holding and dragging instead - like you would with a real switch.",
     solution: "Hold and drag the switch instead of tapping it.",
     component: "SwitchLevel"
   },
@@ -93,7 +93,7 @@ const levelData: LevelData[] = [
     id: 11,
     title: "Unlock Your Phone",
     description: "Unlock the phone with the pattern.",
-    hint: "The pattern might be visible somewhere else on the screen.",
+    hint: "Look at the background design carefully. The pattern is hidden somewhere - it might be in lines, dots, or shapes on the screen.",
     solution: "The unlock pattern is visible in the background design.",
     component: "PhoneLevel"
   },
@@ -101,7 +101,7 @@ const levelData: LevelData[] = [
     id: 12,
     title: "Put Out the Fire",
     description: "Put out the fire to proceed.",
-    hint: "Think about how you'd put out a real fire.",
+    hint: "How would you put out a real candle? Your device has capabilities you might not be using - like the microphone.",
     solution: "Blow into your device's microphone to put out the fire.",
     component: "FireLevel"
   },
@@ -109,7 +109,7 @@ const levelData: LevelData[] = [
     id: 13,
     title: "Find the Difference",
     description: "Find the difference between these two images.",
-    hint: "There might be more differences than you think.",
+    hint: "Don't just look at the images. Sometimes the difference might be in unexpected places, like the URL, title, or description.",
     solution: "The difference is in the URL or title, not in the images.",
     component: "DifferenceLevel"
   },
@@ -117,7 +117,7 @@ const levelData: LevelData[] = [
     id: 14,
     title: "Which Box Has the Prize?",
     description: "Choose the box with the prize.",
-    hint: "The hint might be in the way the boxes are presented.",
+    hint: "The prize might move between boxes. Pay attention to what happens when you click - you might need multiple clicks in a sequence.",
     solution: "Multiple clicks are required. The prize moves between boxes.",
     component: "BoxesLevel"
   },
@@ -125,7 +125,7 @@ const levelData: LevelData[] = [
     id: 15,
     title: "Solve the Puzzle",
     description: "Rearrange the pieces to solve the puzzle.",
-    hint: "Not all pieces need to be moved.",
+    hint: "Not all pieces can be moved. Focus on identifying which ones are actually interactive before trying to solve the entire puzzle.",
     solution: "Only move the pieces that are actually movable.",
     component: "PuzzleLevel"
   },
@@ -133,7 +133,7 @@ const levelData: LevelData[] = [
     id: 16,
     title: "Press the Button 10 Times",
     description: "Press the button exactly 10 times to proceed.",
-    hint: "The count might not be what it seems.",
+    hint: "Watch the counter carefully. It might not always increase by 1 each time - it could go backwards sometimes.",
     solution: "The counter sometimes counts down instead of up.",
     component: "CounterLevel"
   },
@@ -141,7 +141,7 @@ const levelData: LevelData[] = [
     id: 17,
     title: "Feed the Cat",
     description: "Feed the hungry cat.",
-    hint: "Look for food items on the screen.",
+    hint: "Look for food items somewhere else on the screen. You might need to drag an item (like a fish) to the cat.",
     solution: "Drag the fish from elsewhere on the screen to the cat.",
     component: "CatLevel"
   },
@@ -149,7 +149,7 @@ const levelData: LevelData[] = [
     id: 18,
     title: "Turn the Lights On",
     description: "Find a way to turn on all the lights.",
-    hint: "The pattern of light switches matters.",
+    hint: "Each switch affects multiple lights in a pattern. Try to identify the pattern by testing each switch's effect on the lights.",
     solution: "The light switches affect adjacent lights in a specific pattern.",
     component: "LightsLevel"
   },
@@ -157,7 +157,7 @@ const levelData: LevelData[] = [
     id: 19,
     title: "Charge the Phone",
     description: "Your phone is out of battery. Charge it.",
-    hint: "Think about how you charge a real phone.",
+    hint: "Think about your actual phone - how do you charge it? Look for a way to simulate that action in the game.",
     solution: "Connect your device to a charger, or tap specific areas.",
     component: "ChargeLevel"
   },
@@ -165,7 +165,7 @@ const levelData: LevelData[] = [
     id: 20,
     title: "Find the Key",
     description: "Find the key to unlock the door.",
-    hint: "The key might not look like a traditional key.",
+    hint: "The key might not look like a traditional key. Look carefully at the text and spacing in the description and title.",
     solution: "The key is hidden in the level's description spacing.",
     component: "KeyLevel"
   },
@@ -173,7 +173,7 @@ const levelData: LevelData[] = [
     id: 21,
     title: "Balance the Scale",
     description: "Balance the scale to proceed.",
-    hint: "You can drag and drop weights.",
+    hint: "Some weights may be deceptive - they might be heavier or lighter than they appear. Experiment with different combinations.",
     solution: "Some weights are heavier than they appear.",
     component: "ScaleLevel"
   },
@@ -181,7 +181,7 @@ const levelData: LevelData[] = [
     id: 22,
     title: "Clear the Fog",
     description: "Clear the fog to see what's underneath.",
-    hint: "Try using gestures like you would to clear real fog.",
+    hint: "Think about how fog works in real life. What makes fog disappear? Try rubbing the screen quickly as if generating heat.",
     solution: "Rub the screen quickly to generate heat and clear the fog.",
     component: "FogLevel"
   },
@@ -189,7 +189,7 @@ const levelData: LevelData[] = [
     id: 23,
     title: "Find the Hidden Message",
     description: "There's a hidden message. Can you find it?",
-    hint: "Try changing your perspective or the lighting.",
+    hint: "The message might only appear with a change in perspective or lighting. Try tilting your device at different angles.",
     solution: "Tilt your device to see the hidden message in the shadows.",
     component: "MessageLevel"
   },
@@ -197,7 +197,7 @@ const levelData: LevelData[] = [
     id: 24,
     title: "Solve the Riddle",
     description: "I'm tall when I'm young and short when I'm old. What am I?",
-    hint: "Think of things that change height as they age or get used.",
+    hint: "Think of something that literally gets shorter as it ages or is used. It might be something that burns.",
     solution: "The answer is 'candle' - drag the candle to the answer box.",
     component: "RiddleLevel"
   },
@@ -205,7 +205,7 @@ const levelData: LevelData[] = [
     id: 25,
     title: "Color the Rainbow",
     description: "Color the rainbow with the correct colors.",
-    hint: "The right order matters. Think about natural rainbows.",
+    hint: "Remember the order of colors in a rainbow: Red, Orange, Yellow, Green, Blue, Indigo, Violet (ROYGBIV).",
     solution: "The colors must be in the correct rainbow order (ROYGBIV).",
     component: "RainbowLevel"
   },
@@ -213,7 +213,7 @@ const levelData: LevelData[] = [
     id: 26,
     title: "Hit the Target",
     description: "Hit the bullseye to proceed.",
-    hint: "Sometimes aiming isn't enough.",
+    hint: "The target is tricky - it might move when you try to tap it. Try predicting its movement or find a way to stop it first.",
     solution: "The target moves - predict its movement or find another way.",
     component: "TargetLevel"
   },
@@ -221,7 +221,7 @@ const levelData: LevelData[] = [
     id: 27,
     title: "Water the Plant",
     description: "The plant needs water to grow.",
-    hint: "You need to find a water source first.",
+    hint: "You need to find a water source first. Look for cloud elements that could produce rain if dragged to the right place.",
     solution: "Create water by dragging the cloud over the plant.",
     component: "PlantLevel"
   },
@@ -229,7 +229,7 @@ const levelData: LevelData[] = [
     id: 28,
     title: "Cross the River",
     description: "Help the chicken, fox, and grain cross the river.",
-    hint: "Be careful what you leave together unattended.",
+    hint: "This is a classic puzzle - you can't leave the fox with the chicken or the chicken with the grain. Plan your trips carefully.",
     solution: "Classic river crossing puzzle - don't leave fox with chicken or chicken with grain.",
     component: "RiverLevel"
   },
@@ -237,7 +237,7 @@ const levelData: LevelData[] = [
     id: 29,
     title: "Crack the Code",
     description: "Enter the correct sequence to proceed.",
-    hint: "The pattern repeats throughout the level.",
+    hint: "Look for repeating patterns in the background. The code might be hidden in visual elements that aren't obviously part of the puzzle.",
     solution: "The code is visible in the background pattern sequences.",
     component: "CodeLevel"
   },
@@ -245,7 +245,7 @@ const levelData: LevelData[] = [
     id: 30,
     title: "Defuse the Bomb",
     description: "The bomb will explode! Defuse it quickly!",
-    hint: "Cutting the right wire matters, but which one?",
+    hint: "There should be instructions somewhere. Look for a manual or guide hidden in the level - check all elements carefully.",
     solution: "Read the manual hidden elsewhere in the level.",
     component: "BombLevel"
   },
@@ -253,7 +253,7 @@ const levelData: LevelData[] = [
     id: 31,
     title: "Tune the Radio",
     description: "Find the right frequency to proceed.",
-    hint: "Listen carefully for clues as you adjust.",
+    hint: "Listen for audio clues as you adjust the dial. The correct frequency might be hinted at by visual elements in the background.",
     solution: "The correct frequency is hinted at by background elements.",
     component: "RadioLevel"
   },
@@ -261,7 +261,7 @@ const levelData: LevelData[] = [
     id: 32,
     title: "Arrange the Stars",
     description: "Arrange the stars in the correct constellation.",
-    hint: "Look for a pattern guide somewhere in the level.",
+    hint: "There's a faint pattern visible in the background. Try to match your star arrangement to that pattern.",
     solution: "The constellation pattern is faintly visible in the background.",
     component: "StarsLevel"
   },
@@ -269,7 +269,7 @@ const levelData: LevelData[] = [
     id: 33,
     title: "Solve the Equation",
     description: "Solve for x: 3x + 5 = 20",
-    hint: "The solution is not as straightforward as it seems.",
+    hint: "Think outside the box. Rather than just solving for x, you might need to manipulate the equation itself in creative ways.",
     solution: "The solution involves manipulating the equation itself.",
     component: "EquationLevel"
   },
@@ -277,7 +277,7 @@ const levelData: LevelData[] = [
     id: 34,
     title: "Build the Bridge",
     description: "Help the character cross the gap.",
-    hint: "You'll need to create a path using available materials.",
+    hint: "Drag items from your inventory to create a stable structure. Pay attention to the physics - the bridge needs proper support.",
     solution: "Drag items from inventory to create a proper bridge structure.",
     component: "BridgeLevel"
   },
@@ -285,9 +285,50 @@ const levelData: LevelData[] = [
     id: 35,
     title: "Celebration!",
     description: "You've made it to the end! Celebrate!",
-    hint: "Show your excitement!",
+    hint: "Show your excitement! Try tapping rapidly or in a specific pattern.",
     solution: "Simply tap repeatedly on the screen to celebrate.",
     component: "CelebrationLevel"
+  },
+  // New levels start here
+  {
+    id: 36,
+    title: "Wake Up!",
+    description: "It's time to wake up! Make the sun rise.",
+    hint: "The sun might be stuck on screen. Try dragging it in unexpected directions - even off the screen completely.",
+    solution: "Drag the sun icon completely off the screen to trigger the sunrise.",
+    component: "SunriseLevel"
+  },
+  {
+    id: 37,
+    title: "Fix the Clock",
+    description: "The clock is broken. Fix it to show the correct time.",
+    hint: "The hands of the clock might need to be moved manually. But what's the 'correct' time? Look for clues in the level design.",
+    solution: "Arrange the hands to match the time shown subtly in the background elements.",
+    component: "ClockLevel"
+  },
+  {
+    id: 38,
+    title: "Find the Password",
+    description: "You need a password to continue.",
+    hint: "The password is hidden in plain sight. Try turning your device upside down or looking at the text from a different angle.",
+    solution: "The text contains numbers that look like letters when turned upside down, forming the password.",
+    component: "PasswordLevel"
+  },
+  {
+    id: 39,
+    title: "Organize the Shelf",
+    description: "Arrange the items on the shelf correctly.",
+    hint: "There's a specific order to follow. Look at the first letters of each item and see if they spell something meaningful.",
+    solution: "The first letters of the correctly arranged items spell a word that's relevant to the game.",
+    component: "ShelfLevel"
+  },
+  {
+    id: 40,
+    title: "Escape the Room",
+    description: "Find a way out of the locked room.",
+    hint: "Not everything is as it appears. Some 'walls' might actually be doors, and some seemingly solid objects might be movable.",
+    solution: "Move the picture frame to reveal a hidden key, then use it on what appears to be just a wall pattern.",
+    component: "RoomLevel"
   },
 ];
 

@@ -1,5 +1,6 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { toast } from 'sonner';
 
 interface GameState {
   currentLevel: number;
@@ -19,6 +20,7 @@ interface GameContextType {
   isLevelLocked: (level: number) => boolean;
   goToLevel: (level: number) => void;
   nextLevel: () => void;
+  skipWithCode: (code: string) => boolean;
 }
 
 const defaultGameState: GameState = {
@@ -26,7 +28,7 @@ const defaultGameState: GameState = {
   maxLevel: 1,
   completedLevels: [],
   hintsUsed: {},
-  totalLevels: 35,
+  totalLevels: 40, // Updated to include the new levels
 };
 
 const GameContext = createContext<GameContextType | undefined>(undefined);
@@ -109,6 +111,18 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     });
   };
 
+  // New function to skip a level with a secret code
+  const skipWithCode = (code: string): boolean => {
+    if (code === "3636") {
+      completeLevel(gameState.currentLevel);
+      toast.success("Level skipped!", {
+        description: "You found a secret code!"
+      });
+      return true;
+    }
+    return false;
+  };
+
   return (
     <GameContext.Provider
       value={{
@@ -121,6 +135,7 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         isLevelLocked,
         goToLevel,
         nextLevel,
+        skipWithCode,
       }}
     >
       {children}

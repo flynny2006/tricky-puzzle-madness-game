@@ -48,6 +48,13 @@ import EquationLevel from '@/components/levels/EquationLevel';
 import BridgeLevel from '@/components/levels/BridgeLevel';
 import CelebrationLevel from '@/components/levels/CelebrationLevel';
 
+// New levels
+import SunriseLevel from '@/components/levels/SunriseLevel';
+import ClockLevel from '@/components/levels/ClockLevel';
+import PasswordLevel from '@/components/levels/PasswordLevel';
+import ShelfLevel from '@/components/levels/ShelfLevel';
+import RoomLevel from '@/components/levels/RoomLevel';
+
 const levelComponents = {
   DuckLevel,
   FindButtonLevel,
@@ -84,6 +91,11 @@ const levelComponents = {
   EquationLevel,
   BridgeLevel,
   CelebrationLevel,
+  SunriseLevel,
+  ClockLevel,
+  PasswordLevel,
+  ShelfLevel,
+  RoomLevel,
 };
 
 const LevelPage = () => {

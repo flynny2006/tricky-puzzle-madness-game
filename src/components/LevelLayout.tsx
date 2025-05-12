@@ -1,9 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useGame } from '@/context/GameContext';
 import HintDialog from './HintDialog';
+import { Input } from '@/components/ui/input';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogClose } from '@/components/ui/dialog';
 
 interface LevelLayoutProps {
   children: React.ReactNode;
@@ -21,10 +23,21 @@ const LevelLayout: React.FC<LevelLayoutProps> = ({
   hint,
 }) => {
   const navigate = useNavigate();
+  const { skipWithCode } = useGame();
   const [hintOpen, setHintOpen] = React.useState(false);
+  const [secretCode, setSecretCode] = useState('');
+  const [codeDialogOpen, setCodeDialogOpen] = useState(false);
   
   const handleBack = () => {
     navigate('/levels');
+  };
+
+  const handleSubmitCode = () => {
+    const success = skipWithCode(secretCode);
+    if (success) {
+      setCodeDialogOpen(false);
+      navigate(`/level/${levelId + 1}`);
+    }
   };
   
   return (
@@ -38,12 +51,35 @@ const LevelLayout: React.FC<LevelLayoutProps> = ({
           Back
         </Button>
         <h1 className="text-xl font-bold text-game-primary">Level {levelId}</h1>
-        <Button 
-          onClick={() => setHintOpen(true)}
-          className="bg-game-accent text-white hover:bg-game-accent/90"
-        >
-          Hint
-        </Button>
+        <div className="flex gap-2">
+          <Dialog open={codeDialogOpen} onOpenChange={setCodeDialogOpen}>
+            <DialogTrigger asChild>
+              <Button variant="outline" size="icon" className="w-9 h-9 border-game-accent text-game-accent">
+                🔑
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle>Enter Secret Code</DialogTitle>
+              </DialogHeader>
+              <div className="flex items-center space-x-2">
+                <Input
+                  placeholder="Enter code..."
+                  value={secretCode}
+                  onChange={(e) => setSecretCode(e.target.value)}
+                  className="flex-1"
+                />
+                <Button onClick={handleSubmitCode}>Submit</Button>
+              </div>
+            </DialogContent>
+          </Dialog>
+          <Button 
+            onClick={() => setHintOpen(true)}
+            className="bg-game-accent text-white hover:bg-game-accent/90"
+          >
+            Hint
+          </Button>
+        </div>
       </div>
       
       <div className="mb-6">
